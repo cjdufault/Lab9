@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz_Objects_Question_Bank"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantSuggestions", "PlantSuggestions\PlantSuggestions.csproj", "{E5503226-94C1-44EE-A9F1-2006B3F78966}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterBill", "WaterBill\WaterBill.csproj", "{90EECEAC-367E-4014-8A5F-9EF4DD2C5BFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E5503226-94C1-44EE-A9F1-2006B3F78966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5503226-94C1-44EE-A9F1-2006B3F78966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5503226-94C1-44EE-A9F1-2006B3F78966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90EECEAC-367E-4014-8A5F-9EF4DD2C5BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90EECEAC-367E-4014-8A5F-9EF4DD2C5BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90EECEAC-367E-4014-8A5F-9EF4DD2C5BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90EECEAC-367E-4014-8A5F-9EF4DD2C5BFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
