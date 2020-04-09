@@ -12,18 +12,27 @@ namespace ToDoList
 {
     public partial class Form1 : Form
     {
+        List<string> categories = new List<string> { "Work", "Chores", "Errands" };
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cbxCategory.Items.AddRange(categories.ToArray());
+        }
+
         private void btnAddToDo_Click(object sender, EventArgs e)
         {
             string toDoText = txtNewToDo.Text;
-            bool urgent = chkUrgent.Checked;
 
-            if (!string.IsNullOrWhiteSpace(toDoText)){ // do nothing if field is empty
-                ToDo todDoItem = new ToDo(toDoText, urgent);
+            if (!string.IsNullOrWhiteSpace(toDoText) && cbxCategory.SelectedIndex != -1){ // do nothing if field is empty
+                bool urgent = chkUrgent.Checked;
+                string category = cbxCategory.SelectedItem.ToString();
+
+                ToDo todDoItem = new ToDo(toDoText, urgent, category);
 
                 if (!ItemExists(todDoItem)) // check if item is a duplicate
                 {
@@ -35,6 +44,10 @@ namespace ToDoList
                     MessageBox.Show("Item has already been added.", "Duplicate Item");
                     txtNewToDo.Text = "";
                 }
+            }
+            else
+            {
+                MessageBox.Show("There is at least one empty field", "Missing information");
             }
         }
 
