@@ -47,7 +47,15 @@ namespace QuizApp
             Question question = QuizQuestions[questionIndex];
             List<string> answers = question.AllAnswers;
 
-            lblQuestion.Text = question.QuestionText;
+            if (question.Points > 1)
+            {
+                lblQuestion.Text = $"{question.QuestionText} ({question.Points} points)";
+            }
+            else
+            {
+                lblQuestion.Text = $"{question.QuestionText} ({question.Points} point)";
+            }
+
             lblResult.Text = "???";
             btnNextQuestion.Enabled = false;
             btnCheckAnswer.Enabled = true;
@@ -56,6 +64,7 @@ namespace QuizApp
             for (int i = 0; i < QuizRadioButtons.Count; i++)
             {
                 QuizRadioButtons[i].Checked = false;
+                QuizRadioButtons[i].Enabled = true; // radio buttons are disabled when answers are checked
                 QuizRadioButtons[i].Text = answers[i];
             }
         }
@@ -63,9 +72,6 @@ namespace QuizApp
         private void btnCheckAnswer_Click(object sender, EventArgs e)
         {
             string answer = null;
-            btnNextQuestion.Enabled = true;
-            btnCheckAnswer.Enabled = false;
-            btnNextQuestion.Focus();
 
             // find the checked radio button, if there is one
             foreach (RadioButton rb in QuizRadioButtons)
@@ -84,10 +90,20 @@ namespace QuizApp
             }
             else
             {
+                // disable radio buttons if there's an answer
+                foreach (RadioButton rb in QuizRadioButtons)
+                {
+                    rb.Enabled = false;
+                }
+
+                btnNextQuestion.Enabled = true;
+                btnCheckAnswer.Enabled = false;
+                btnNextQuestion.Focus();
+
                 Question question = QuizQuestions[CurrentQuestionIndex];
 
                 // check answer, display result, and add to score if correct
-                bool isCorrect = question.CheckAnswer(answer);
+                bool isCorrect = question.IsCorrect(answer);
 
                 if (isCorrect)
                 {

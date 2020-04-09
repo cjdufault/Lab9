@@ -49,7 +49,7 @@ namespace QuizApp
             }
         }
 
-        public bool CheckAnswer(string chosenAnswer)
+        public bool IsCorrect(string chosenAnswer)
         {
             return chosenAnswer.Equals(CorrectAnswer);
         }

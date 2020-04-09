@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "ToDoList\ToDoLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizApp", "QuizApp\QuizApp.csproj", "{56875CEA-EB33-49B3-82D2-BD429B287C74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz_Objects_Question_Bank", "quiz-question-bank\Quiz_Objects\Quiz_Objects_Question_Bank.csproj", "{BFFAC1DC-F971-4960-96E4-572FED77AE79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{56875CEA-EB33-49B3-82D2-BD429B287C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56875CEA-EB33-49B3-82D2-BD429B287C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56875CEA-EB33-49B3-82D2-BD429B287C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFAC1DC-F971-4960-96E4-572FED77AE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFAC1DC-F971-4960-96E4-572FED77AE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFAC1DC-F971-4960-96E4-572FED77AE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFAC1DC-F971-4960-96E4-572FED77AE79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

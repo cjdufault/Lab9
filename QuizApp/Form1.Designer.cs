@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Location = new System.Drawing.Point(45, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 243);
+            this.panel1.Size = new System.Drawing.Size(643, 243);
             this.panel1.TabIndex = 0;
             // 
             // radioButton4
@@ -129,7 +129,7 @@
             // 
             this.lblResult.Location = new System.Drawing.Point(271, 369);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(594, 119);
+            this.lblResult.Size = new System.Drawing.Size(417, 119);
             this.lblResult.TabIndex = 4;
             this.lblResult.Text = "???";
             // 
@@ -138,7 +138,7 @@
             this.AcceptButton = this.btnCheckAnswer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 571);
+            this.ClientSize = new System.Drawing.Size(719, 571);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnNextQuestion);
             this.Controls.Add(this.btnCheckAnswer);
